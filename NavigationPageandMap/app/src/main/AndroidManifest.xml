@@ -8,9 +8,13 @@
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality. 
+         location permissions for the 'MyLocation' functionality.
     -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
 
     <application
         android:allowBackup="true"
@@ -56,19 +60,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="za.ac.up.cs.www.navup.MainActivity" />
         </activity>
-        <activity
-            android:name=".ApplicationScreen"
-            android:label="@string/title_activity_application_screen"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="za.ac.up.cs.www.navup.MainActivity" />
-        </activity>
+
         <activity
             android:name=".navigationPage"
             android:label="@string/title_activity_navigation_page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>
